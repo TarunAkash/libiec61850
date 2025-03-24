@@ -2,8 +2,8 @@ cmake_minimum_required(VERSION 3.5.1)
 
 # automagically detect if we should cross-compile
 if(DEFINED ENV{TOOLCHAIN})
-    set(CMAKE_C_COMPILER	$ENV{TOOLCHAIN}gcc)
-    set(CMAKE_CXX_COMPILER	$ENV{TOOLCHAIN}g++)
+    set(CMAKE_C_COMPILER	$ENV{TOOLCHAIN}afl-gcc)
+    set(CMAKE_CXX_COMPILER	$ENV{TOOLCHAIN}afl-g++)
     set(CMAKE_AR	"$ENV{TOOLCHAIN}ar" CACHE FILEPATH "CW archiver" FORCE)
 endif()
 

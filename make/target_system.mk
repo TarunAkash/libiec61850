@@ -147,8 +147,8 @@ DYNLIB_LDFLAGS=-lpthread
 endif
 
 ifneq ($(TARGET), CLANG-CHECK)
-CC=$(TOOLCHAIN_PREFIX)gcc
-CPP=$(TOOLCHAIN_PREFIX)g++
+CC=$(TOOLCHAIN_PREFIX)afl-gcc
+CPP=$(TOOLCHAIN_PREFIX)afl-g++
 endif
 
 ifeq ($(TARGET), BSD)
